@@ -1,0 +1,573 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&display=swap');
+@import "noteTaking.css";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{   
+        font-family: "Racing Sans One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+}
+
+.herosection{
+    position: relative;
+    height: 286px;
+    background-color: black;
+    z-index: -1;
+}
+.hero{
+    width:100%;
+    height: 300px;
+}
+.herotext{
+    position: absolute;
+   left: 200px;
+    display: flex;
+    flex-direction: row;
+    padding-right:100px;
+    top: 150px;
+    font-size: 5vw;
+    background: linear-gradient(to right,#0F4FFF ,#F22BA9 15% 40%, #F22BA9 45% 60%,#0F4FFF 70% 100%);
+    background-clip: text; 
+   color: transparent;
+}
+.nobreak{
+    display: flex;
+    white-space: nowrap;
+}
+.bulbbox{
+   width: clamp(4vw, 70px, 5vw);  
+    height: 90px; 
+    /* height: 6vw; */
+    margin-top: 8px;
+    margin-right: 8px;
+   /* margin-right: 8px; */
+    /* display: none; */
+    /* background-color: #350101; */
+}
+
+main{
+    flex-grow: 1;
+    width: 100%;
+    background: url(./image/digital-art-moon-wallpaper\ 2.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -370px;
+    height: 100vh;
+     overflow-y: scroll;
+    /* margin-top: -15px; */
+    scroll-behavior: smooth;
+    
+}
+main::-webkit-scrollbar{
+    width: 10px;
+    background-color: #0b0b0b7a;
+}
+
+main::-webkit-scrollbar-thumb{
+    color: aquamarine;
+    background-color: #ed0999;
+    border-radius: 20px;
+    border: 1px solid rgb(224, 152, 252);
+}
+
+main::-webkit-scrollbar-track{
+    background-color: #333;
+    border-radius: 20px;
+}
+.welcome{
+    position: absolute; 
+    display: none;
+    /* min-height: 100vh; */
+    top: 0;
+    z-index: 1;
+    background-color: #070707;
+    /* animation-name: welcome;  
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;  */
+}
+.welcomeimage img{
+    position:  absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+}
+
+/* @keyframes welcome {
+    0%{
+        display: block;
+    }
+    
+    100%{
+        display: none;
+    }
+} */
+
+.backgroundcover{
+  /*  background-color: rgba(255, 255, 255, 0.2); */
+  background-color: rgba(18, 18, 18, 0.247);
+   /* backdrop-filter: blur(2px); */
+   width: 100%;
+   min-height: 100vh;
+    
+}
+.notecontent{
+   padding-top: 150px;
+  padding-left: clamp(40px, 10vw, 120px);
+    padding-bottom: 30px;
+    place-content: center;
+    width: 100%; 
+    row-gap: 90px;
+   min-height: 100vh;
+   display: grid;
+grid-template-columns: repeat(6, 1fr);
+}
+.notecards{
+    margin: auto;
+    /* width: 293px; */
+   /*  width: clamp(10vw, 273px, 20vw); */
+   width: clamp(120px, 20vw, 500px);
+    border-radius: 25px;
+    /* height: 179px; */
+    height: clamp(120px, 45vh, 200px);
+    background-image: url(./image/Note\ background.png) ;
+    position: relative;
+    
+}
+.notecards:hover{
+    transform: translateY(-20px);
+    transition: ease;
+    transition-duration: 0.5s;
+    border: 5px solid  ;
+    border-radius: 25px;
+    border-top: none;
+    border-left: none;
+    border-block-end-color: #F22BA9;
+}
+
+.notecards-cover-dark{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border-radius:25px;
+    width: clamp(120px, 20vw, 500px);
+    height: clamp(120px, 45vh, 200px);
+    position: relative;
+}
+
+.display-title{
+    cursor: pointer;
+}
+
+.time{
+    cursor: default;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(10px, 5vw, 15px);
+    font-weight: bolder;
+    color: #f6e9f1;
+    position: absolute;
+    height: fit-content;
+    padding-top: 5px ;
+     width: clamp(50px, 10vw, 130px); 
+    top: 70%;
+    right: 5px;
+    padding-right: 15px;
+}
+
+
+
+.noteTaking{
+    position: fixed;
+    top: 400px;
+    right: 10px;
+}
+
+.takenote:hover{
+    transition: ease-in-out;
+    transition-duration: 1s;
+    background-color: rgba(245, 245, 245, 0.479);
+}
+.takenote{
+    cursor: default;
+    display: flex;
+    margin-right: 100px;
+    justify-content: center;
+    align-items: center;
+   width: 5vw;
+    height: 5vw;
+    color: aliceblue;
+    background-color: rgba(59, 3, 81, 0.418);
+    border-radius: 50%;
+    font-size: 5vw;
+    position: relative;
+    top: -120px;
+}
+
+.notedisplay{
+    position: absolute;
+    top: 285px;
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.459);
+}
+
+.notedisplay img{
+    top:30px;
+    position: absolute;
+    width: 40vw;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: 2px solid red;
+    border-radius: 25px;
+}
+
+.imageoverlay{
+    top:30px;
+    position: absolute;
+    font-size: 1.5vw;
+    width: 40vw;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.187);
+    backdrop-filter: blur(5px);
+    border: 2px solid red;
+    border-radius: 25px;
+    overflow-x: hidden;
+}
+
+.hide{
+    cursor: default;
+     display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    font-size: 80px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    color: red;
+}
+
+.hide:hover{
+    cursor: pointer;
+    transition: ease-in-out;
+    transition-duration: 0.2s;
+    background-color: rgba(255, 255, 255, 0.37);
+}
+
+.specificnote{
+    cursor: default;
+    line-height: 25px;
+    margin-top: 30px;
+    height: 75%;
+    padding-left: 10px;
+    padding-right: 10px;
+    white-space: wrap;
+    color: rgb(255, 253, 253);
+    text-align: justify;
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    padding-bottom: 10px;
+}
+
+.specificnote::-webkit-scrollbar{
+    width: 5px;
+    display: flex;
+    position: relative;
+}
+.specificnote::-webkit-scrollbar-track{
+    background-color: #171516;
+    border-radius: 2vw;
+}
+.specificnote::-webkit-scrollbar-thumb{
+    background-color: #9f2873;
+    border-radius: 1vw;
+}
+
+.specificnotetitle{
+    cursor: default;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: 2vw;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.note{
+    display: none;
+}
+
+.doubleclick-contents{
+    display: none ;
+    color: darkorange;
+    position: absolute; 
+    background-color: rgba(0, 0, 0, 0.758);
+    height: 250px;
+    width: 300px; 
+    border-radius: 5px;
+    padding-top: 50px;
+}
+
+li{
+   
+    margin-bottom: 50px;
+    text-align: center ;
+    cursor: default;
+    list-style: none;
+}
+
+li:hover{
+    color: #9f2873;
+    width: 100%;
+    background-color: rgba(240, 248, 255, 0.406);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cancel{
+    font-size: 32px;
+    font-weight: bold;
+    color: aliceblue;
+    position: absolute; 
+    top: 10px;
+    right: 10px; 
+    transform: rotate(45deg);
+    cursor: default;
+
+}
+
+.cancel:hover{
+    background:#ed0999 ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.addnote{
+    display: none;
+    position: absolute;
+    top: 290px;
+    background-color: #9f287347;
+    width: 100%;
+}
+
+.closenote{
+    cursor: default;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 90px;
+    font-size: 80px;
+    font-weight: bold;
+    transform: rotate(45deg);
+    background-color: rgba(255, 228, 196, 0.114);
+    color: whitesmoke;
+}
+
+.closenote:hover{
+    background-color: red;
+}
+
+@media  screen and (max-width: 840px ){
+    .time{ 
+        width: 50%;
+        right: 20px;
+        top: 140px;
+        justify-content: flex-end; 
+    }
+    header img{
+        height: 200px;
+    }
+    .herotext{
+        left: clamp(5vw, 300px, 15.9vw);
+        margin-left: 0;
+        flex-wrap: nowrap;
+        width: 80%;
+    }
+    .bulbbox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: clamp(4vw, 70px, 5vw);
+        height: 6vw;
+        margin-top: 8px;
+    }
+    .bulb{
+        min-height: 5vw; 
+        max-height: 6vw;
+        min-width: 5vw;
+        max-width: 7vw;
+        margin-bottom: 10px;
+    }
+    main{
+        background-position-y: bottom;
+    }
+    .addnote{
+        width: 100%;
+        
+    }
+    .save { 
+        top: 383px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        min-width: 100.65px;
+        max-width: 150px;
+        left: 100%;
+       top: 10%;
+        border-radius: -5vw;
+        text-align: center;
+        font-size: 2vw;
+        margin-left: 10px;
+        height: min(9vw, 40px);
+    }
+    .edit{
+        top: 383px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        min-width: 100.65px;
+        max-width: 150px;
+        left: 100%;
+       top: 10%;
+        border-radius: -5vw;
+        text-align: center;
+        font-size: 2vw;
+        margin-left: 10px;
+        height: min(9vw, 40px);
+    }
+    .saveimg {
+        top: 2px;
+    }
+    .closenote{
+        width: 7vw;
+        height: 7vw;
+        right: 8vw;
+        font-size:5.4vw;
+    }
+    .notedisplay{
+        width: 97%;
+    }
+    .takenote{
+        margin-right: 20px;
+    }
+    .imageoverlay{
+        width: 60vw;
+        height: 90%;
+        font-size: 3vw;
+    }
+    .specificnotetitle{
+        font-size: 6vw;
+    }
+    .specificnote{
+        height: 75%;
+    }
+    .notedisplay img{
+        width: 60vw;
+        height: 90%;
+    }
+    .hide{
+       width: 30vw;
+       height:30vw;
+       top: -38px;
+       z-index: 1;
+       right: -9vw;
+       font-size: 8vw;
+       font-weight: bold;
+       transform: rotate(45deg);
+       color: red;
+   }
+   .doubleclick-contents{
+    display: none ;
+    color: darkorange;
+     position: absolute;
+    background-color: rgba(0, 0, 0, 0.758);
+    height:fit-content ;
+    width: 30vw;
+    border-radius: 5px;
+    padding-top: 50px;
+   }
+} 
+
+@media  screen and (max-width: 778px ){
+    .time {
+        width: 64%;
+    }
+}
+@media  screen and (max-width: 608px ){
+    .time {
+        width: 69%;
+    }
+}
+@media  screen and (max-width: 600px ){
+   .notecontent{
+    padding-top: 30px;
+    padding-left: 25%;
+    padding-bottom: 30px;
+    width: 100%; 
+    row-gap: 90px;
+   min-height: 100vh;
+   display: grid;
+   justify-content: center;
+   align-content: center;
+grid-template-columns: repeat(2, 1fr); 
+
+}
+    .notecards{
+        width: clamp(60px, 55vw, 300px);
+        height:clamp(80px, 30vw, 190px);
+    }
+    .notecards-cover-dark
+   { 
+    height:clamp(80px, 30vw, 190px);
+    width:clamp(60px, 55vw, 300px);
+}
+.time{ 
+    left: 30px;
+    top: 70%;
+   /*  font-size: 2vw; */
+   font-size: clamp(4px, 5vw, 10px);
+   
+}
+}
+@media  screen and (max-width: 446px ){
+    .save {
+        left: 40%;
+        top: 120%;
+    }
+    .edit{
+        left: 40%;
+        top: 120%;
+    }
+}

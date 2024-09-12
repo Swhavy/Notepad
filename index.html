@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Display</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header class="herosection" id="herosection">
+        <div class="herotext"><span class="nobreak">Bring your ideas</span><div class="bulbbox"><img class="bulb" src="./image/Bulb.png" width="55"></div><span class="nobreak">into 1place</span></div>
+    <img class="hero" src="./image/Header Notes.svg">
+   </header>
+   <main id="Main">
+        <div class="welcome" id="welcome">
+            <img class="welcomeimage" src="./image/Wallpaper.svg" width="100%" height="100%"> 
+        </div>
+         <div class="backgroundcover" id="backgroundcover">
+             <div class="notecontent" id="notecontent">
+            </div> 
+            <section class="noteTaking">
+                <div class="takenote" id="takenote">+</div>
+        </section>
+            <div class="doubleclick-contents" id="doubleclick-contents">
+                <span class="cancel" id="cancel">+</span>
+                <ul>
+                    <nav>
+                        <li id="deletebtn">Delete</li>
+                        <li id="shareBtn">Share</li>
+                        <li id="editBtn">Edit</li>
+                    </nav>
+                </ul>
+            </div>
+        </div> 
+        <div id="notedisplay" class="notedisplay">
+            <img class="imgoverlay" id="imgoverlay" src="./image/hans-eiskonen-8Pm_A-OHJGg-unsplash.jpg" width="500" height="800">
+            <div class="imageoverlay" id="imageoverlay">
+                <div id="hide" class="hide">+</div>  
+                <div id="specificnotetitle" class="specificnotetitle">Hero</div>
+                <div id="specificnote" class="specificnote"></div>
+            </div>
+        </div>
+        
+            <section class="addnote" id="addnote">
+                <div class="closenote" id="closenote">+</div>
+                <input type="text" id="title" class="title" placeholder="Type the title of your note here">
+                <div class="main">
+                    <textarea name="usernote" class="mainnote" id="mainnote" cols="30" rows="10" placeholder="Type your note here"></textarea>
+                    <!-- <input type="text" name="usernote" class="note" id="note" placeholder="Type your note here"> -->
+                    <button  class="save" id="save-btn">Save note
+                        <img class="saveimg" src="Image/Pin.png" alt="save" width="30" height="20">
+                    </button>
+                    <button  class="edit" id="edit">Edit
+                        <img class="saveimg" src="Image/Pin.png" alt="save" width="30" height="20">
+                    </button>
+                </div>
+                
+               </section>
+   </main>
+    <script src="note.js"></script>   
+</body>
+</html>
