@@ -267,9 +267,9 @@ takeNote.addEventListener("click", () => {
     title.setAttribute("placeholder", "Type the title of your note here") 
     Note.value = ""
     title.value = ""
-     addNote.style.height = (Main.offsetHeight - 10) + "px"
+     addNote.style.height = (Main.offsetHeight - 5) + "px"
      window.addEventListener("resize", () => {
-         addNote.style.height = (Main.offsetHeight - 10)+ "px"
+         addNote.style.height = (Main.offsetHeight - 5)+ "px"
      })
     addNote.style.display = "block"
 } )
