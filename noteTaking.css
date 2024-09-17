@@ -15,7 +15,7 @@ body{
 .title{
     font-family: sans-serif;
     width: max(30vw, 430px);
-    height: 95px; 
+    height: clamp(100px, 30vh, 5rem); 
     background-color:#202030;
     color:#EF8A17 ;
     font-size: min(5vw, 20px);
@@ -36,6 +36,7 @@ body{
     
 }
 .mainnote{
+    
     font-family: sans-serif;
     width: max(40vw, 600px);
     height: min(450px, 50vh);
@@ -128,8 +129,10 @@ text-align: center;
 
 @media  screen and (max-width: 840px ){
     .title{
+        margin-top: 0;
         width: 60%;
-        height: 10vh;
+        /* height: 10vh; */
+        height: 30vh;
         border-radius: 1.2vw;
     }
     [placeholder]:is(.title, main, .mainnote){
