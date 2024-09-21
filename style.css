@@ -556,12 +556,20 @@ li:hover{
          font-size: clamp(5px, 15vw, 10px);
          letter-spacing:clamp(0.5px, 2vw, 1px);
          min-width: 70vw;
-         height: 67%;
+         height: 40vh;
+         margin: 45%;
      }
      .notedisplay img{
          width: 60vw;
          min-width: 70vw;
-         height: 67%;
+         height: 40vh;
+         margin: 45%;
+     }
+     .specificnote{
+        margin-top: 0;
+     }
+     .specificnotetitle{
+        margin-top: 5px;
      }
  }
 @media  screen and (max-width: 778px ){
@@ -619,6 +627,7 @@ grid-template-columns: repeat(2, 1fr);
 
 @media  screen and (max-height: 185px ){
     main{
+        /* height: 150vh; */
         height: 150vh;
     }
 }
