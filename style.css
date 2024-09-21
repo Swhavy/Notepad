@@ -516,6 +516,7 @@ li:hover{
     }
     .imageoverlay{
         width: 60vw;
+        /* height: 90%; */
         height: 90%;
         font-size:clamp(12px, 8vw, 17px);
     }
@@ -527,7 +528,8 @@ li:hover{
     }
     .notedisplay img{
         width: 60vw;
-        height: 90%;
+       /*  height: 90%; */
+       height: 90%;
     }
     .hide{
        width: 30vw;
@@ -556,14 +558,12 @@ li:hover{
          font-size: clamp(5px, 15vw, 10px);
          letter-spacing:clamp(0.5px, 2vw, 1px);
          min-width: 70vw;
-         height: 40vh;
-         margin: 45%;
+         height: 60vh;
      }
      .notedisplay img{
          width: 60vw;
          min-width: 70vw;
-         height: 40vh;
-         margin: 45%;
+         height: 60vh;
      }
      .specificnote{
         margin-top: 0;
@@ -636,5 +636,14 @@ grid-template-columns: repeat(2, 1fr);
     .saveimg{
         top: 1.0vw;
         left:30px;
+    }
+}
+
+@media  screen and (min-height: 1200px){
+    .imageoverlay{
+        height: 58vh;
+    }
+    .notedisplay img{
+        height: 58vh;
     }
 }
