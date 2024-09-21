@@ -111,8 +111,8 @@ save.addEventListener('click', (e) => {
      let info = `
         <div class="notecards">
           <div id="${comma.length}" class="notecards-cover-dark notecover">
-        <div id="displayTitle" class="display-title">${title.value}</div>
-        <div id="timeDisplay" class="time">${timing()}</div>
+        <div id="displayTitle" class="display-title notecover">${title.value}</div>
+        <div id="timeDisplay" class="time notecover">${timing()}</div>
         <div id="note" class="note">${Note.value}</div>
     </div>
     <div class="notecards-cover-light"></div>
@@ -166,6 +166,7 @@ document.addEventListener("click", function (e) {
         displaynote.style.height = (Main.offsetHeight - 10) + "px"
      window.addEventListener("resize", () => {
          displaynote.style.height = (Main.offsetHeight - 10)+ "px"
+         console.log(e)
      })
          displaynote.style.display = "flex" 
     }
