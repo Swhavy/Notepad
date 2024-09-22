@@ -17,6 +17,7 @@ body{
 }
 
 .herosection{
+    background-color: aqua;
     position: relative;
     height: 286px;
     background-color: black;
@@ -24,7 +25,9 @@ body{
 }
 .hero{
     width:100%;
+    /* height: 300px; */
     height: 300px;
+    background-color: #0F4FFF;
 }
 .herotext{
     position: absolute;
@@ -133,9 +136,9 @@ main::-webkit-scrollbar-track{
 grid-template-columns: repeat(6, 1fr);
 }
 .notecards{
-    margin: auto;
+  /*   margin: auto; */
     /* width: 293px; */
-   /*  width: clamp(10vw, 273px, 20vw); */
+   /* align-items: flex-end; */
    width: clamp(120px, 20vw, 500px);
     border-radius: 25px;
     /* height: 179px; */
@@ -158,8 +161,7 @@ grid-template-columns: repeat(6, 1fr);
 .notecards-cover-dark{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center; 
+    justify-content:center;
     color: whitesmoke;
     background-color: rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(5px);
@@ -169,11 +171,12 @@ grid-template-columns: repeat(6, 1fr);
     position: relative;
 }
 
+
 .display-title{
+   margin: auto;
     padding: 10px;
     text-align: center;
-    background-color: #0F4FFF;
-    width: 100%;
+    width: 80%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -186,21 +189,13 @@ grid-template-columns: repeat(6, 1fr);
     font-size: clamp(10px, 5vw, 15px);
     font-weight: bolder;
     color: #f6e9f1;
-    position: absolute;
     height: fit-content;
     padding-top: 5px ;
     padding-bottom: 1vw;
-    height: 100%;
-     width: clamp(50px, 10vw, 130px);
-     display: flex; 
-     align-items: flex-end;
-    /* top: 70%; */
-    right: 5px;
+    width: clamp(50px, 10vw, 130px); 
+    align-self: flex-end;
     padding-right: 15px;
-    background-color: burlywood;
 }
-
-
 
 .noteTaking{
     position: fixed;
@@ -245,7 +240,7 @@ grid-template-columns: repeat(6, 1fr);
     top:30px;
     position: absolute;
     width: 40vw;
-    height: 80vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -258,12 +253,13 @@ grid-template-columns: repeat(6, 1fr);
     position: absolute;
     font-size: 1.5vw;
     width: 40vw;
-    height: 80vh;
+    height: 70vh;
     background: rgba(0, 0, 0, 0.187);
     backdrop-filter: blur(5px);
     border: 2px solid red;
     border-radius: 25px;
-    overflow-x: hidden;
+    overflow: hidden;
+
 }
 
 .hide{
@@ -277,7 +273,7 @@ grid-template-columns: repeat(6, 1fr);
     position: absolute;
     top: 0;
     right: 1vw;
-    font-size: 80px;
+    font-size: 5vw;
     font-weight: bold;
     transform: rotate(45deg);
     color: rgb(184, 8, 8);
@@ -518,7 +514,7 @@ li:hover{
         width: 60vw;
         /* height: 90%; */
         height: 90%;
-        font-size:clamp(12px, 8vw, 17px);
+        font-size: clamp(5px, 8vw, 10px);
     }
     .specificnotetitle{
         font-size: 6vw;
@@ -639,11 +635,12 @@ grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media  screen and (min-height: 1200px){
+@media  screen and (min-height: 500px){
     .imageoverlay{
-        height: 58vh;
+        height: 45vh;
     }
     .notedisplay img{
-        height: 58vh;
+        height: 45vh;
     }
 }
+
