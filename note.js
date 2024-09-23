@@ -94,8 +94,8 @@ function timing() {
 
 
 save.addEventListener('click', (e) => {
-    save.style.display = "block"
     reConfigure.style.display = "none"
+    save.style.display = "block"
     if(noteStorage && timeStorage && titleStorage && storageData){
         noteSet = noteStorage
         titleSet = titleStorage
@@ -264,6 +264,8 @@ options.style.display = "none"
 
 
 takeNote.addEventListener("click", () => {
+    reConfigure.style.display = "none"
+    save.style.display = "block"
     Note.setAttribute("placeholder", "Type your note here")
     title.setAttribute("placeholder", "Type the title of your note here") 
     Note.value = ""
@@ -315,8 +317,8 @@ addNote.style.display = "none"
 noteContainer.innerHTML = renderRecent()
 Note.setAttribute("placeholder", "Type your note here")
 title.setAttribute("placeholder", "Type the title of your note here") 
-save.style.display = "block"
 reConfigure.style.display = "none"
+save.style.display = "block"
     })
     console.log(idTarget)
 })
