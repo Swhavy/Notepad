@@ -128,9 +128,9 @@ main::-webkit-scrollbar-track{
     
 }
 .notecontent{
-   padding-top: 40px;
+   padding-top: 2vh;
   padding-left: clamp(40px, 10vw, 120px);
-    padding-bottom: 30px;
+    padding-bottom: 2vh;
     width: 100%; 
     row-gap: 3.5vh;
    min-height: 100vh;
