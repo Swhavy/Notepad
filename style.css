@@ -132,7 +132,7 @@ main::-webkit-scrollbar-track{
   padding-left: clamp(40px, 10vw, 120px);
     padding-bottom: 30px;
     width: 100%; 
-    row-gap: 90px;
+    row-gap: 3.5vh;
    min-height: 100vh;
    display: grid;
 grid-template-columns: repeat(6, 1fr);
